@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact · Miami Bar Oslo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=9" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <a href="index.html" class="logo">
+        <span class="logo-badge"><span class="logo-text">MIAMI</span></span>
+        <span class="logo-bar">BAR</span>
+      </a>
+      <a href="book.html" class="nav-cta">Book</a>
+    </nav>
+    <div class="container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="book.html" class="nav-cta">Book with us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="page-header container reveal">
+    <p class="eyebrow">Get in touch</p>
+    <h1>Contact</h1>
+    <p>Questions, private events or anything else — we'd love to hear from you.</p>
+  </div>
+
+  <section style="padding-top: 20px;">
+    <div class="container">
+      <div class="grid-2">
+
+        <div class="reveal">
+          <div class="form-card">
+            <!-- Same Web3Forms setup as book.html — see the comment there. -->
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+              <input type="hidden" name="subject" value="Website contact form — Miami Bar Oslo" />
+
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary form-submit">
+                Send message
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <h2 style="font-size: 1.4rem;">Details</h2>
+          <p style="color: var(--text-dim); margin-top: 16px;">Fridtjof Nansens plass 8, 0160 Oslo</p>
+          <p><a href="tel:+4741191735" style="color: var(--text-dim); text-decoration: none;">+47 41 19 17 35</a></p>
+
+          <ul class="hours-list">
+            <li><span>Monday</span><span>18:00 – 06:00</span></li>
+            <li><span>Tuesday</span><span>18:00 – 06:00</span></li>
+            <li><span>Wednesday</span><span>18:00 – 06:00</span></li>
+            <li><span>Thursday</span><span>18:00 – 06:00</span></li>
+            <li><span>Friday</span><span>18:00 – 06:00</span></li>
+            <li><span>Saturday</span><span>18:00 – 06:00</span></li>
+            <li><span>Sunday</span><span>18:00 – 06:00</span></li>
+          </ul>
+
+          <div class="map-frame">
+            <iframe
+              title="Map"
+              src="https://www.google.com/maps?q=Miami+Bar+Oslo,+Fridtjof+Nansens+plass+8,+0160+Oslo&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">&copy; <span id="year"></span> Miami Bar Oslo. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

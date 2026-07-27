@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking received · Miami Bar Oslo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=9" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <a href="index.html" class="logo">
+        <span class="logo-badge"><span class="logo-text">MIAMI</span></span>
+        <span class="logo-bar">BAR</span>
+      </a>
+      <a href="book.html" class="nav-cta">Book</a>
+    </nav>
+    <div class="container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="book.html" class="nav-cta">Book with us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container confirmation">
+    <div class="icon">💃</div>
+    <h1>Thanks — request received!</h1>
+    <p style="color: var(--text-dim); max-width: 420px; margin: 12px auto 30px; text-transform: none; font-family: var(--font-body);">
+      We'll confirm by email or phone shortly. See you soon!
+    </p>
+    <a href="index.html" class="btn btn-primary">Back to home</a>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">&copy; <span id="year"></span> Miami Bar Oslo. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

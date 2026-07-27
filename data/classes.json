@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "title": "Salsa Class",
+      "type": "Salsa",
+      "date_label": "Every Tuesday",
+      "time": "19:00",
+      "description": "All levels welcome — come solo or bring a partner."
+    },
+    {
+      "title": "Latin Party Night",
+      "type": "DJ set",
+      "date_label": "Every Friday",
+      "time": "22:00",
+      "description": "Resident DJs spin salsa, reggaeton and Latin hits until close."
+    },
+    {
+      "title": "Art Show & Pop-Up",
+      "type": "Pop-up",
+      "date_label": "Last Saturday of the month",
+      "time": "18:00",
+      "description": "Local artists and pop-up vendors take over the space for the night."
+    }
+  ]
+}

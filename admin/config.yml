@@ -1,0 +1,32 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "classes"
+    label: "Classes & Events"
+    description: "Everything shown on the Events page — add, edit or remove as needed."
+    files:
+      - file: "data/classes.json"
+        label: "Classes & Events List"
+        name: "classes"
+        fields:
+          - label: "Classes & Events"
+            name: "items"
+            widget: "list"
+            summary: "{{title}} — {{date_label}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                options: ["Salsa", "Party", "Pop-up", "DJ set"]
+              - label: "Day / Date"
+                name: "date_label"
+                widget: "string"
+                hint: "e.g. 'Every Tuesday' or a specific date like '15 August'"
+              - { label: "Time", name: "time", widget: "string", hint: "e.g. 19:00" }
+              - { label: "Description", name: "description", widget: "text", required: false }
