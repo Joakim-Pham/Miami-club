@@ -35,18 +35,18 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
-var EVENT_ICONS = {
-  Salsa: "💃",
-  Party: "🎉",
-  "Pop-up": "🎨",
-  "DJ set": "🎧"
+var EVENT_MARK = {
+  Salsa: "S",
+  Party: "PA",
+  "Pop-up": "PU",
+  "DJ set": "DJ"
 };
 
 function renderEventRow(item) {
-  var icon = EVENT_ICONS[item.type] || "🎶";
+  var mark = EVENT_MARK[item.type] || "•";
   return (
     '<div class="event-row">' +
-      '<div class="event-thumb">' + icon + "</div>" +
+      '<div class="event-thumb">' + escapeHtml(mark) + "</div>" +
       '<div class="event-info">' +
         '<span class="event-type">' + escapeHtml(item.type) + "</span>" +
         "<h3>" + escapeHtml(item.title) + "</h3>" +

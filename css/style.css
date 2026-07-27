@@ -237,13 +237,13 @@ h1, h2, h3 {
 .hero-tile.tile-a::before {
   top: -20%;
   right: -20%;
-  background: linear-gradient(200deg, #ffe066 0%, #ff9a3d 55%, #ff4fd8 100%);
+  background: var(--amber);
 }
 
 .hero-tile.tile-b::before {
   top: -22%;
   left: -18%;
-  background: linear-gradient(200deg, #29e2ec 0%, #ff2f8f 100%);
+  background: var(--pink);
 }
 
 .hero-tile .tile-label {
@@ -393,7 +393,10 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: #fff;
+  letter-spacing: 0.02em;
 }
 
 .events-list:not(.grid-view) .event-thumb {
@@ -656,9 +659,12 @@ section.alt .section-lead {
   padding: 140px 0;
 }
 
-.confirmation .icon {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
+.confirmation .confirm-mark {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 24px;
+  background: var(--pink);
+  border-radius: 50%;
 }
 
 .confirmation h1 {
