@@ -57,6 +57,19 @@ Instagram doesn't offer a simple "show my latest posts" embed on its own, so the
 
 Free tier is enough for a small feed widget; no login or account needed on this site's side. The homepage just has a "Follow us" teaser that links to `gallery.html` — no separate embed to maintain there.
 
+## Class sign-ups you can actually see a list of
+
+The general booking form (below) just emails you each submission one at a time — fine for one-off table/party requests, but not great for a recurring class where you want to see who's coming. For classes, use a **Google Form** instead: responses land in a spreadsheet automatically, so you get a sortable, filterable list of everyone signed up.
+
+Setup (2 minutes, one-time, per class):
+
+1. Go to [forms.google.com](https://forms.google.com), create a new form (e.g. "Salsa Class Sign-Up") with whatever fields you want (name, email, phone).
+2. Click **Send**, then the link icon, and copy the shareable link.
+3. To see responses as a spreadsheet: in the form, go to the **Responses** tab → click the green Sheets icon → "Create spreadsheet."
+4. In `/admin`, open that class under Classes & Events, and paste the link into the **Sign-up link** field.
+
+That's it — the Events page automatically shows a "Sign up" button (instead of "Book now") for any class with a sign-up link set, and takes people straight to your Google Form. Leave the field blank for anything that should just go through the normal booking form.
+
 ## Booking & contact forms
 
 Since this is a static site with no server, the booking and contact forms use **[Web3Forms](https://web3forms.com)** — a free service that emails form submissions straight to you.

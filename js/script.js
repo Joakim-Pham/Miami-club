@@ -44,6 +44,12 @@ var EVENT_MARK = {
 
 function renderEventRow(item) {
   var mark = EVENT_MARK[item.type] || "•";
+  // If a class has a sign-up link (a Google Form, say), send people there
+  // instead of the general booking form — responses land in a sheet you
+  // can actually read, instead of one-off emails.
+  var hasSignup = item.signup_url && item.signup_url.trim();
+  var ctaHref = hasSignup ? item.signup_url : "book.html";
+  var ctaLabel = hasSignup ? "Sign up" : "Book now";
   return (
     '<div class="event-row">' +
       '<div class="event-thumb">' + escapeHtml(mark) + "</div>" +
@@ -53,7 +59,7 @@ function renderEventRow(item) {
         '<p class="event-date">' + escapeHtml(item.date_label) + (item.time ? " · " + escapeHtml(item.time) : "") + "</p>" +
         (item.description ? '<p class="desc">' + escapeHtml(item.description) + "</p>" : "") +
       "</div>" +
-      '<a href="book.html" class="event-cta">Book now</a>' +
+      '<a href="' + escapeHtml(ctaHref) + '" class="event-cta"' + (hasSignup ? ' target="_blank" rel="noopener"' : "") + ">" + ctaLabel + "</a>" +
     "</div>"
   );
 }

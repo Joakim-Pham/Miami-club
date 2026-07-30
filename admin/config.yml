@@ -2,6 +2,12 @@ backend:
   name: git-gateway
   branch: main
 
+# When this admin is opened from localhost, Decap automatically uses a
+# local proxy server instead of Netlify Identity/Git Gateway — lets you
+# test the real editor without deploying. Run `npx decap-server` first.
+# Has no effect once the site is live on a real domain.
+local_backend: true
+
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
@@ -30,3 +36,8 @@ collections:
                 hint: "e.g. 'Every Tuesday' or a specific date like '15 August'"
               - { label: "Time", name: "time", widget: "string", hint: "e.g. 19:00" }
               - { label: "Description", name: "description", widget: "text", required: false }
+              - label: "Sign-up link (optional)"
+                name: "signup_url"
+                widget: "string"
+                required: false
+                hint: "Paste a Google Form link here to track who's signed up in a spreadsheet. Leave blank to use the normal booking form instead — see README for how to set up the form."
