@@ -9,13 +9,12 @@ Plain HTML, CSS and a little JavaScript. No menu or drink pricing on the site, b
 ```
 index.html              Home
 events.html              Events — renders data/classes.json
-gallery.html             Gallery — the Instagram feed embed
 book.html                Booking request form (table, birthday, private party, salsa class, pop-up)
 book-confirmation.html   Shown after a booking is submitted
 contact.html             Contact form + map
 css/style.css            All styles
 js/script.js             Mobile menu toggle
-images/                  Put real photos here
+images/                  Put real photos here (logo.png is the site logo, used in the nav + footer)
 data/classes.json        Classes & events list — edited via /admin, or by hand
 admin/                   The admin login + editor (Decap CMS)
 netlify.toml             Tells Netlify this is a plain static site
@@ -47,15 +46,9 @@ This gives you a real login page where you can add, edit or remove classes and e
 
 After that first setup, using it day-to-day is just: go to `/admin`, log in, edit, publish.
 
-## Instagram feed (the Gallery page)
+## Instagram
 
-Instagram doesn't offer a simple "show my latest posts" embed on its own, so the Gallery page uses a free widget service instead — this is what makes the gallery real photos instead of placeholders:
-
-1. Go to [snapwidget.com](https://snapwidget.com) and connect your Instagram account.
-2. Pick a feed style (grid works well here) and copy the `<iframe>` embed code it gives you.
-3. Open `gallery.html`, find the placeholder box (there's a comment marking it), and paste that `<iframe>` in its place — remove the placeholder `<div>` entirely.
-
-Free tier is enough for a small feed widget; no login or account needed on this site's side. The homepage just has a "Follow us" teaser that links to `gallery.html` — no separate embed to maintain there.
+There's no dedicated gallery page — the site just links out to `instagram.com/miami.oslo` (nav, footer, and the homepage "Follow us" section) instead of hosting a feed itself. To update the handle, search for `miami.oslo` across the `.html` files and replace it.
 
 ## Class sign-ups you can actually see a list of
 
@@ -86,7 +79,6 @@ That's it — no backend, no accounts to manage, submissions just show up in the
 ## Placeholder content — replace before launch
 
 - Classes/events in `data/classes.json` (edit via `/admin` once set up, or by hand)
-- The Instagram embed placeholder on `gallery.html` (see above) — until that's set up, the page just shows a placeholder box
 - The `YOUR_WEB3FORMS_ACCESS_KEY` placeholders (see above)
 
 ## Running it locally

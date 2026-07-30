@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=13" />
+  <link rel="stylesheet" href="css/style.css?v=33" />
 </head>
 <body>
 
@@ -16,8 +16,7 @@
     <nav class="nav container">
       <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <a href="index.html" class="logo">
-        <span class="logo-badge"><span class="logo-text">MIAMI</span></span>
-        <span class="logo-bar">BAR</span>
+        <img src="images/logo.png" alt="Miami" class="logo-img" width="900" height="561" />
       </a>
       <a href="book.html" class="nav-cta">Book</a>
     </nav>
@@ -25,7 +24,6 @@
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="events.html">Events</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="book.html" class="nav-cta">Book with us</a></li>
       </ul>
@@ -33,16 +31,28 @@
   </header>
 
   <div class="container">
-    <div class="hero-tiles reveal">
-      <div class="hero-tile tile-a">
-        <span class="tile-location">Oslo</span>
-        <span class="tile-label">Latin party place</span>
+    <div class="hero-heading reveal">
+      <div class="hero-box">
+        <p class="eyebrow">Oslo</p>
+        <h1 class="hero-sentence">Oslo <span class="accent">number 1</span> Latin Bar &amp; Club</h1>
       </div>
     </div>
 
-    <div class="location-strip">
-      <span>Fridtjof Nansens plass 8, 0160 Oslo — open 18:00–06:00, every night</span>
-      <a href="tel:+4741191735">+47 41 19 17 35</a>
+    <!--
+      Photo scroll — placeholder tiles for now. Once you have real photos:
+      1. Drop the image files in the images folder.
+      2. Replace each <div class="photo-tile"></div> below with
+         <div class="photo-tile"><img src="images/yourphoto.jpg" alt=""></div>
+      Add or remove tiles freely — it scrolls sideways either way.
+    -->
+    <div class="photo-scroll reveal">
+      <div class="photo-scroll-track">
+        <div class="photo-tile"></div>
+        <div class="photo-tile"></div>
+        <div class="photo-tile"></div>
+        <div class="photo-tile"></div>
+        <div class="photo-tile"></div>
+      </div>
     </div>
   </div>
 
@@ -71,6 +81,28 @@
       <p style="margin-top: 24px;">
         <a href="events.html" class="btn btn-outline">See full schedule</a>
       </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="grid-2">
+        <div class="reveal">
+          <div class="story-photo">Photo coming soon — swap this box for a real photo once you have one (see comment in index.html).</div>
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">Our story</p>
+          <h2>How it started</h2>
+          <!--
+            Placeholder — replace this paragraph with the real story once
+            you have it: when the bar opened, who started it, why Latin
+            party nights, what makes this place different.
+          -->
+          <p style="color: var(--text-dim);">
+            Placeholder text — this is where the story of how Miami Bar started goes. Replace it with the real thing once it's written up.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -104,10 +136,25 @@
 
   <section>
     <div class="container" style="text-align: center;">
-      <p class="eyebrow">@miamibaroslo</p>
+      <a class="eyebrow" href="https://www.instagram.com/miami.oslo/" target="_blank" rel="noopener">@miami.oslo</a>
       <h2 class="section-heading reveal">Follow us</h2>
-      <p class="section-lead reveal" style="margin-left: auto; margin-right: auto;">The latest from Instagram lives on our gallery page.</p>
-      <a href="gallery.html" class="btn btn-primary reveal">View gallery</a>
+      <p class="section-lead reveal" style="margin-left: auto; margin-right: auto;">Photos, events and everything else — follow along on Instagram.</p>
+      <a href="https://www.instagram.com/miami.oslo/" target="_blank" rel="noopener" class="btn btn-primary reveal">Follow on Instagram</a>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <p class="eyebrow">Find us</p>
+      <h2 class="section-heading reveal">Come say Hola</h2>
+      <div class="map-frame reveal">
+        <iframe
+          title="Map"
+          src="https://www.google.com/maps?q=Miami+Bar+Oslo,+Fridtjof+Nansens+plass+8,+0160+Oslo&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </div>
   </section>
 
@@ -116,8 +163,7 @@
       <div class="footer-grid">
         <div>
           <a href="index.html" class="logo" style="margin-bottom: 10px;">
-            <span class="logo-badge"><span class="logo-text">MIAMI</span></span>
-        <span class="logo-bar">BAR</span>
+            <img src="images/logo.png" alt="Miami" class="logo-img" width="900" height="561" />
           </a>
           <p>Oslo's top Latin party place — on Fridtjof Nansens plass.</p>
         </div>
@@ -125,13 +171,13 @@
           <h4>Visit us</h4>
           <p>Fridtjof Nansens plass 8, 0160 Oslo</p>
           <p><a href="tel:+4741191735">+47 41 19 17 35</a></p>
+          <p><a href="https://www.instagram.com/miami.oslo/" target="_blank" rel="noopener">Instagram</a></p>
         </div>
         <div>
           <h4>Explore</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="events.html">Events</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -140,7 +186,7 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.js?v=2"></script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

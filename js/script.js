@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+  var bgFx = document.createElement("div");
+  bgFx.className = "bg-fx";
+  bgFx.innerHTML =
+    '<span class="bg-orb orb-pink"></span>' +
+    '<span class="bg-orb orb-purple"></span>' +
+    '<span class="bg-orb orb-amber"></span>';
+  document.body.prepend(bgFx);
+
   var toggle = document.querySelector(".nav-toggle");
   var links = document.querySelector(".nav-links");
 
